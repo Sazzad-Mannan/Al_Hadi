@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Al-Hadi International Academy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="Images/favicon_io/favicon-16x16.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Slider-->
+    <link href="css/jquery.easy_slides.css" rel="stylesheet" type="text/css" />
+    <script src="js/easy_slides.js"></script>
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+
+ window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});
+
+window.addEventListener('scroll', () => {
+
+    const sections = document.querySelectorAll(
+        '#home, #facilities, #about, #classes, #notice-events, #teachers, #admission'
+    );
+
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item');
+    const academicDropdown = document.querySelector('.nav-item.dropdown > .nav-link');
+
+    let current = 'home';
+
+    sections.forEach(section => {
+        const top = section.offsetTop - 130;
+        const bottom = top + section.offsetHeight;
+
+        if (window.scrollY >= top && window.scrollY < bottom) {
+            current = section.id;
+        }
+    });
+
+    // Remove all active classes
+    navLinks.forEach(link => link.classList.remove('active'));
+    if (academicDropdown) academicDropdown.classList.remove('active');
+
+    // Activate normal + dropdown items
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+
+        if (href === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+
+    // 🔥 SPECIAL CASE: Academic parent highlight
+    if (current === 'classes' ||current === 'notice-events' || current === 'teachers') {
+        if (academicDropdown) {
+            academicDropdown.classList.add('active');
+        }
+    }
+
+});
+    </script>
+</head>
+
+<body >
+    <div  class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <nav id="navbar" class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="#home" class="navbar-brand">
+                <img src="Images/logo.png" alt="Logo">
+                <!-- <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Al-Hadi International Academy </h1> -->
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#facilities" class="nav-item nav-link">Facilities</a>
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academic</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="#classes" class="dropdown-item">Curriculum</a>
+                            <a href="#notice-events" class="dropdown-item">Notices & Upcoming Events</a>
+                            <a href="#teachers" class="dropdown-item">Teachers</a>
+                           
+                        </div>
+                    </div>
+
+                    <a href="#admission" class="nav-item nav-link">Admission</a>
+                    <a href="#contact" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <!-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a> -->
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <div class="alert alert-warning mb-0">
+  <marquee behavior="scroll" direction="left">
+    📢 Admission Open for 2026 | 📚 New Classes Starting Soon | 🏫 Contact Office for Details
+  </marquee>
+</div>
+
+
+        <!-- Carousel Start -->
+        <div id="home" class="container-fluid p-0 mb-5 ">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid owl-img" src="Images/slider/img1.jpg"  alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-2 text-white animated slideInDown mb-4">The Best Kindergarten School For Your Child</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <!-- <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
+                                    <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid owl-img" src="Images/slider/img4.jpg" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-2 text-white animated slideInDown mb-4">Make A Brighter Future For Your Child</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
+                                    <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid owl-img" src="Images/slider/img5.jpg" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-2 text-white animated slideInDown mb-4">Make A Brighter Future For Your Child</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
+                                    <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid owl-img" src="Images/slider/img6.jpg" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div  class="col-10 col-lg-8">
+                                    <h1 class="display-2 text-white animated slideInDown mb-4">Make A Brighter Future For Your Child</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                    <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
+                                    <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+
+        <!-- Facilities Start -->
+<!-- Facilities Start -->
+<div id="facilities"  class="container-xxl py-5">
+    <div  class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">School Facilities</h1>
+            <p>Providing a nurturing environment with modern facilities to support academic excellence and character development.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Facility 1 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="Images/facilities/physical_campus2.jpg" alt="Physical Campus">
+                    </div>
+                    <div class="facility-content border-primary">
+                        <h4>Permanent Campus</h4>
+                        <p>We have a permanent campus with modern classrooms and a peaceful environment designed for effective learning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 2 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="Images/facilities/kids_zone.jpg" alt="Kids Zone">
+                    </div>
+                    <div class="facility-content border-success">
+                        <h4>Kids Zone</h4>
+                        <p>A safe and engaging space that encourages creativity, play, and social development.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 3 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="Images/facilities/activity_based_learning.jpg" alt="Activity Based Learning">
+                    </div>
+                    <div class="facility-content border-warning">
+                        <h4>Activity Based Learning</h4>
+                        <p>Interactive lessons that inspire creativity, curiosity, and problem-solving skills.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facility 4 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="Images/facilities/highly_qualified_teachers.jpg" alt="Highly Qualified Teachers">
+                    </div>
+                    <div class="facility-content border-info">
+                        <h4>Highly Qualified Teachers</h4>
+                        <p>Experienced and dedicated educators delivering quality education while nurturing confidence, values, and academic excellence.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Facilities End -->
+
+
+        <!-- <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">School Facilities</h1>
+                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="facility-item">
+                            <div class="facility-icon bg-primary">
+                                <span class="bg-primary"></span>
+                                <i class="fa fa-bus-alt fa-3x text-primary"></i>
+                                 <img class="img-fluid" src="Images/facilities/physical_campus.jpg" alt="" style="width: 50px; height: 50px;">
+                                <span class="bg-primary"></span>
+                            </div>
+                            <div class="facility-text bg-primary">
+                                <h3 class="text-primary mb-3">Physical campus</h3>
+                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="facility-item">
+                            <div class="facility-icon bg-success">
+                                <span class="bg-success"></span>
+                                <i class="fa fa-futbol fa-3x text-success"></i>
+                                <span class="bg-success"></span>
+                            </div>
+                            <div class="facility-text bg-success">
+                                <h3 class="text-success mb-3">Playground</h3>
+                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="facility-item">
+                            <div class="facility-icon bg-warning">
+                                <span class="bg-warning"></span>
+                                <i class="fa fa-home fa-3x text-warning"></i>
+                                <span class="bg-warning"></span>
+                            </div>
+                            <div class="facility-text bg-warning">
+                                <h3 class="text-warning mb-3">Activity Based Learning</h3>
+                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="facility-item">
+                            <div class="facility-icon bg-info">
+                                <span class="bg-info"></span>
+                                <i class="fa fa-chalkboard-teacher fa-3x text-info"></i>
+                                <span class="bg-info"></span>
+                            </div>
+                            <div class="facility-text bg-info">
+                                <h3 class="text-info mb-3">Positive Learning</h3>
+                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Facilities End -->
+
+
+        <!-- About Start -->
+        <!-- <div id="about" class="container-xxl py-5">
+            <div class="container">
+                 <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">About Our Work And Our Cultural Activities</h1>
+            <p>We are committed to academic excellence, character building, and meaningful cultural experiences that prepare students to succeed in a changing world.</p>
+        </div>
+        
+                <div class="row  align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" style="text-align: justify;" data-wow-delay="0.1s">
+                        <p>We are committed to creating a dynamic learning environment where academic excellence goes hand in hand with cultural enrichment. Our institution focuses on developing not only knowledgeable students but also responsible, confident, and creative individuals.Through a wide range of educational programs, we ensure that students receive quality learning experiences that encourage critical thinking, innovation, and lifelong curiosity. Alongside academics, we place strong importance on cultural development as an essential part of student life.</p>
+                        <p>Our cultural activities include various events, celebrations, competitions, and performances that help students explore their talents and express themselves freely. These activities build confidence, leadership skills, teamwork, and a strong sense of community.</p>
+                        <div class="row g-4 align-items-center">
+                            <div class="col-sm-6">
+                             
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="ms-3">
+                                       <h6 class="text-primary mb-1"></h6>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row">
+                                <section>
+    
+        <div class="slider slider_circle_10">
+            <div>
+                <img src="Images/cultural_activity/img1.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img2.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img3.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img4.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img5.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img6.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img7.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img8.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img9.jpg">
+            </div>
+             <div>
+                <img src="Images/cultural_activity/img10.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img11.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img12.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img13.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img14.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img15.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img16.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img17.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img18.jpg">
+            </div>
+            <div class="next_button"></div>
+            <div class="prev_button"></div>
+        </div>
+        <script>
+                EasySlides('.slider_circle_10',{
+                    'autoplay': true,
+                    'show': 13
+                });
+        </script>
+    </section>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- About End -->
+
+
+        <!-- About Start -->
+<div id="about" class="about-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5 wow fadeInUp">
+            <span class="about-badge">Who We Are</span>
+            <h1 class="mt-3">Academic Excellence & Cultural Enrichment</h1>
+            <p class="about-subtitle">
+                Empowering students through quality education, strong values,
+                and meaningful cultural experiences.
+            </p>
+        </div>
+
+        <div class="row align-items-center g-5">
+
+            <!-- Left Side -->
+            <div class="col-lg-6 wow fadeInLeft">
+
+                <div class="about-card">
+
+                    <h3 class="mb-4">
+                        Nurturing Future Leaders Through Learning & Culture
+                    </h3>
+
+                    <p>
+                        At Al-Hadi International Academy, we provide a balanced
+                        educational experience that combines academic excellence,
+                        character development, and cultural awareness.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div class="feature-box">
+                            <i class="fa fa-check-circle"></i>
+                            Modern Learning Environment
+                        </div>
+
+                        <div class="feature-box">
+                            <i class="fa fa-check-circle"></i>
+                            Cultural & Creative Activities
+                        </div>
+
+                        <div class="feature-box">
+                            <i class="fa fa-check-circle"></i>
+                            Character Building Programs
+                        </div>
+
+                        <div class="feature-box">
+                            <i class="fa fa-check-circle"></i>
+                            Leadership & Teamwork Development
+                        </div>
+
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="row mt-4 text-center">
+
+                        <div class="col-3">
+                            <h2>500+</h2>
+                            <small>Students</small>
+                        </div>
+
+                        <div class="col-3">
+                            <h2>20+</h2>
+                            <small>Teachers</small>
+                        </div>
+
+                        <div class="col-3">
+                            <h2>50+</h2>
+                            <small>Events</small>
+                        </div>
+
+                        <div class="col-3">
+                            <h2>100%</h2>
+                            <small>Care</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-lg-6 wow fadeInRight">
+
+                <div class="gallery-card">
+
+                    <!-- Your Existing EasySlides Here -->
+
+                    
+                                     <section>
+    
+        <div class="slider slider_circle_10">
+            <div>
+                <img src="Images/cultural_activity/img1.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img2.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img3.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img4.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img5.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img6.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img7.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img8.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img9.jpg">
+            </div>
+             <div>
+                <img src="Images/cultural_activity/img10.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img11.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img12.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img13.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img14.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img15.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img16.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img17.jpg">
+            </div>
+            <div>
+                <img src="Images/cultural_activity/img18.jpg">
+            </div>
+            <div class="next_button"></div>
+            <div class="prev_button"></div>
+        </div>
+        <script>
+                EasySlides('.slider_circle_10',{
+                    'autoplay': true,
+                    'show': 13
+                });
+        </script>
+    </section>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- About End -->
+
+
+        <!-- Call To Action Start -->
+        <!-- <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-light rounded">
+                    <div class="row g-0">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded" src="img/call-to-action.jpg" style="object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100 d-flex flex-column justify-content-center p-5">
+                                <h1 class="mb-4">Become A Teacher</h1>
+                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                                </p>
+                                <a class="btn btn-primary py-3 px-5" href="">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Call To Action End -->
+
+
+        <!-- Classes Start -->
+        <div id="classes" class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">School Curriculum</h1>
+                    <p>Our program blends academic excellence with Islamic education and character building, including the National Curriculum (Play to Class Five), Hifz Program, and structured character development activities.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="classes-item">
+                            <div class="rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="img/classes-1.jpg" alt="">
+                            </div>
+                            <div class="class-card rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">National Curriculum (English Version) <br> Play - Standard Five</a>
+                                <ul class="space-y-2 text-sm">
+          <li>Communication & Language</li>
+          <li>Literacy</li>
+          <li>Understanding the World</li>
+          <li>Mathematics</li>
+          <li>Expressive Arts & Design</li>
+        </ul>
+                                <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="classes-item">
+                            <div class=" rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="img/classes-2.jpg" alt="">
+                            </div>
+                            <div class="class-card rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Hifz Program</a>
+                                      <ul class="space-y-2 text-sm">
+          <li>Communication & Language</li>
+          <li>Literacy</li>
+          <li>Understanding the World</li>
+          <li>Mathematics</li>
+          <li>Expressive Arts & Design</li>
+        </ul>
+                              <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="classes-item">
+                            <div class=" rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="img/classes-3.jpg" alt="">
+                            </div>
+                            <div class="class-card rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Character Development Curriculum</a>
+                                      <ul class="space-y-2 text-sm">
+          <li>Communication & Language</li>
+          <li>Literacy</li>
+          <li>Understanding the World</li>
+          <li>Mathematics</li>
+          <li>Expressive Arts & Design</li>
+        </ul>
+                               <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Classes End -->
+
+
+        <!-- Notice & Events Section Start -->
+<div class="container-xxl py-5" id="notice-events">
+    <div class="container">
+
+        <div class="text-center mx-auto mb-5" style="max-width:700px;">
+            <!-- <h5 class="text-primary fw-bold">Stay Updated</h5> -->
+            <h1>Notices & Upcoming Events</h1>
+            <p>Keep track of important announcements, admissions, examinations, and upcoming school activities.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Notice Board -->
+            <div class="col-lg-7">
+                <div class="modern-card h-100">
+                    <div class="section-header">
+                        <i class="fas fa-bullhorn text-primary"></i>
+                        <h4>Notice Board</h4>
+                    </div>
+
+                    <div class="notice-list">
+
+                        <div class="notice-item">
+                            <span class="badge bg-danger">NEW</span>
+                            <div>
+                                <h6>Admission Open for Academic Year 2026</h6>
+                                <small>September 15, 2026</small>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">View</a>
+                        </div>
+
+                        <div class="notice-item">
+                            <span class="badge bg-success">NEW</span>
+                            <div>
+                                <h6>Parent-Teacher Meeting Schedule</h6>
+                                <small>September 22, 2026</small>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">View</a>
+                        </div>
+
+                        <div class="notice-item">
+                            <span class="badge bg-warning text-dark">PDF</span>
+                            <div>
+                                <h6>Mid-Term Examination Routine</h6>
+                                <small>October 10, 2026</small>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">Download</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="col-lg-5">
+                <div class="modern-card h-100">
+                    <div class="section-header">
+                        <i class="fas fa-calendar-alt text-success"></i>
+                        <h4>Upcoming Events</h4>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date bg-primary">
+                            <span>15</span>
+                            <small>SEP</small>
+                        </div>
+                        <div>
+                            <h6>Science Fair</h6>
+                            <p>Students showcase innovative projects.</p>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date bg-success">
+                            <span>28</span>
+                            <small>SEP</small>
+                        </div>
+                        <div>
+                            <h6>Cultural Program</h6>
+                            <p>Music, drama, art, and performances.</p>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date bg-warning">
+                            <span>05</span>
+                            <small>OCT</small>
+                        </div>
+                        <div>
+                            <h6>Annual Sports Day</h6>
+                            <p>Exciting competitions and team events.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Notice & Events Section End -->
+
+
+
+
+
+        <!-- Appointment Start -->
+        <!-- <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-light rounded">
+                    <div class="row g-0">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="h-100 d-flex flex-column justify-content-center p-5">
+                                <h1 class="mb-4">Make Appointment</h1>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-sm-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
+                                                <label for="gname">Gurdian Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
+                                                <label for="gmail">Gurdian Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
+                                                <label for="cname">Child Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
+                                                <label for="cage">Child Age</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                                <label for="message">Message</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded" src="img/appointment.jpg" style="object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Appointment End -->
+
+
+
+        <!-- Teachers Section Start -->
+<div id="teachers" class="container-xxl py-5 ">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+            <h1 class="mb-3">Meet Our Expert Teachers</h1>
+            <p>
+                Our highly qualified educators are dedicated to inspiring academic excellence,
+                character development, and lifelong learning.
+            </p>
+        </div>
+
+
+      <div class="slider slider_four_in_line">
+
+    <!-- Teacher 1 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Aklima khanam</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.B.A , M.B.A (Acounting) <br> National University</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher 2 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Hurain jannat Ibtesam</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.B.A , M.B.A (HRM)<br> University Of Chittagong</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher 3 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Afia Khanam Beli</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.Sc. (Zoology) , M.Sc. (Fisheries)<br> University Of Chittagong</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher 4 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Umme Habiba</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.A (English)<br> Chittagong College (NU)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher 5 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Afroza Sultana</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.S.S , M.S.S (Economics)<br> University Of Chittagong</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher 6 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Humaira Afroz Jami</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.S.S , M.S.S (Sociology)<br> University Of Chittagong</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teacher 7 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Nishat Akter</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.A (Fazil) , M.A (Kamil)<br> Islamic University , Kushtia</div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Teacher 8 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Mahsura Al Marzan</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.S.S , M.S.S (Communication and Journalism)<br> University Of Chittagong</div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Teacher 9 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Shayela Sharmin</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.S.S , M.S.S (Economics)<br> University Of Chittagong</div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Teacher 10 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Rifat Sultana Jessy</h4>
+                <span class="teacher-role">Teacher</span>
+                <div class="qualification">B.Sc. (Zoology) , M.Sc. (Fisheries)<br> Chittagong College (NU)</div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Teacher 11 -->
+    <div>
+        <div class="teacher-card">
+            <div class="teacher-image">
+                <img src="Images//teachers/default.jpg" alt="">
+            </div>
+            <div class="teacher-content">
+                <h4>Afroza Sultana</h4>
+                <span class="teacher-role"></span>
+                <div class="qualification">B.S.S , M.S.S (Economics)<br> University Of Chittagong</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="next_button"></div>
+    <div class="prev_button"></div>
+
+</div>
+    </div></div>
+<script>
+EasySlides('.slider_four_in_line',{
+    autoplay: true,
+    show: 7
+});
+</script>
+    
+
+<!-- Teachers Section End -->
+
+
+<!-- Admission Section Start -->
+<div id="admission" class="container-xxl py-5">
+    <div class="container">
+
+        <div class="admission-section">
+            <div class="text-center mb-5">
+<span class="admission-badge">
+                        Admissions Open 2026
+                    </span></div>
+            <div class="row align-items-center">
+
+                <!-- Left Side -->
+                <div class="col-lg-7">
+                    
+
+                    <h1 class="mt-3 mb-4">
+                        Begin Your Child's Journey With Us
+                    </h1>
+
+                    <p class="mb-4">
+                        Al-Hadi International Academy welcomes applications for
+                        Play Group to Standard Five. We provide a nurturing
+                        environment, highly qualified teachers, modern facilities,
+                        and a strong focus on academic excellence and character development.
+                    </p>
+
+                    <div class="admission-features">
+
+                        <div class="feature-item">
+                            <i class="fa fa-check-circle"></i>
+                            National Curriculum (English Version)
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fa fa-check-circle"></i>
+                            Hifz & Islamic Studies Program
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fa fa-check-circle"></i>
+                            Highly Qualified Teachers
+                        </div>
+
+                        <div class="feature-item">
+                            <i class="fa fa-check-circle"></i>
+                            Safe & Child-Friendly Campus
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+
+                <!-- Right Side -->
+                <div class="col-lg-5 mt-5 mt-lg-0">
+
+                    <div class="admission-card">
+
+                        <h3 class="mb-4">Admission Information</h3>
+
+                        <div class="info-row">
+                            <span>Classes</span>
+                            <strong>Play - Standard Five</strong>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Admission Status</span>
+                            <strong class="text-success">Open</strong>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Session</span>
+                            <strong>2026</strong>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Office Hours</span>
+                            <strong>9:00 AM - 4:00 PM</strong>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Contact</span>
+                            <strong>+880 1XXXXXXXXX</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-5 text-center">
+
+                        <a href="files/admission-form.pdf"
+                           class="btn btn-primary rounded-pill px-4 py-3 me-3"
+                           download>
+                            <i class="fa fa-download me-2"></i>
+                            Download Admission Form
+                        </a>
+
+                      
+
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Admission Section End -->
+
+
+    
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Our Clients Say!</h1>
+                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item bg-light rounded p-5">
+                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 90px; height: 90px;">
+                            <div class="ps-3">
+                                <h3 class="mb-1">Client Name</h3>
+                                <span>Profession</span>
+                            </div>
+                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-5">
+                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 90px; height: 90px;">
+                            <div class="ps-3">
+                                <h3 class="mb-1">Client Name</h3>
+                                <span>Profession</span>
+                            </div>
+                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-5">
+                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 90px; height: 90px;">
+                            <div class="ps-3">
+                                <h3 class="mb-1">Client Name</h3>
+                                <span>Profession</span>
+                            </div>
+                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Contact Start -->
+<div id="contact" class="container-xxl py-5">
+    <div class="container">
+
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width:700px;">
+            <span class="section-badge">Get In Touch</span>
+            <h1 class="mt-3 mb-3">We're Here To Help</h1>
+            <p>
+                Have questions about admissions, classes, or school activities?
+                Contact us and our team will be happy to assist you.
+            </p>
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h5>School Address</h5>
+                    <p>
+                        Al-Hadi International Academy<br>
+                        Chattogram, Bangladesh
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h5>Call Us</h5>
+                    <p>
+                        +880 1XXXXXXXXX<br>
+                        +880 1XXXXXXXXX
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h5>Email Address</h5>
+                    <p>
+                        info@alhadiacademy.com<br>
+                        admission@alhadiacademy.com
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="row g-0">
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-box">
+
+                        <h3 class="mb-4">Send Us A Message</h3>
+
+                        <form>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control modern-input" placeholder="Your Name">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control modern-input" placeholder="Email Address">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control modern-input" placeholder="Phone Number">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control modern-input" placeholder="Subject">
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea class="form-control modern-input"
+                                        rows="6"
+                                        placeholder="Write your message..."></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn-success contact-btn">
+                                        Send Message
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                   
+
+                      
+                            <div class="position-relative h-100">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1845.1252617649293!2d91.85527527366038!3d22.344167489664457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad27004a17a5bd%3A0x237780317c7249fc!2sAl-Hadi%20International%20Academy!5e0!3m2!1sen!2sbd!4v1780768767923!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                       
+
+                   
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6">
+                        <h3 class="text-white mb-4">Get In Touch</h3>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Road No:02, Beside C Block Steel Bridge, North of Tower, Kolpolok Residential Area, Bakolia,, Chittagong, Bangladesh, 4203</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>01896-322722</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>alhadiinternationalacademy@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61554542700412"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Quick Links</h3>
+                        <a class="btn btn-link text-white-50" href="#about">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <h3 class="text-white mb-4">Newsletter</h3>
+                        <p>Join our newsletter and stay updated with school activities, notices, special events, and your child's educational journey.</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; 2026 Al-Hadi International Academy, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By Rifat Softwares
+                            <br>
+                            <!-- Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#home">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
