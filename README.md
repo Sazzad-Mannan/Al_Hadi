@@ -87,7 +87,7 @@ The website includes information about:
 
 ## 🌐 Live Website
 
-🔗 [Visit Website](https://Sazzad-Mannan.github.io/al-hadi-international-academy/)
+🔗 [Visit Website](https://Sazzad-Mannan.github.io/Al_Hadi/)
 
 
 ## 🚀 Installation
