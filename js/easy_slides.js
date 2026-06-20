@@ -5,24 +5,24 @@ EasySlides - слайдер
 Autor 2017-2024 Shabanov Ivan (Шабанов Иван)
 Usage:
 
-   EasySlides(
-       '.slider',  // Селектор слайдера
-        {
-            'autoplay': true,
-            'timeout': 3000,
-            'show': 5, //Сколь-ко позывать слайдов (по умолчанию 5: 1-активный, 2-предыдущих и 2-следующих)
-            'vertical': false,  //Если True то слайдер вертикальный, слайды листаются движением вверх/вниз
-            'reverse': false, //Перевернутый слайдер
-            'touchevents': true, //Вкючено ли события на прикосновения к сладеру (листания и т.п)
-            'delayaftershow': 300, //Задержка после смены слайдера, в это время слайдер нельзя листать
-            'stepbystep': true, //При клике на далекий слайд перейти к нему последовательно, а не сразу
-            'startslide': 0,  //Стартовый слайд
-            'beforeshow': function () {},
-            'aftershow': function () {},
-            'onclick': function (slide) {},
-            'disabledefaultclick': false,
-        }
-    );
+  EasySlides(
+    '.slider',  // Slider selector
+    {
+        'autoplay': true,
+        'timeout': 3000,
+        'show': 5, // Number of slides to display (default is 5: 1 active, 2 previous, and 2 next)
+        'vertical': false, // If true, the slider becomes vertical and slides move up/down
+        'reverse': false, // Reverse slider direction
+        'touchevents': true, // Enable touch events (swiping, touch navigation, etc.)
+        'delayaftershow': 300, // Delay after slide change; during this time the slider cannot be navigated
+        'stepbystep': true, // When clicking a distant slide, move to it step by step instead of jumping directly
+        'startslide': 0, // Initial slide index
+        'beforeshow': function () {}, // Callback before showing a slide
+        'aftershow': function () {}, // Callback after showing a slide
+        'onclick': function (slide) {}, // Callback when a slide is clicked
+        'disabledefaultclick': false, // Disable default click behavior if true
+    }
+);
 
 */
 

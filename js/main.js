@@ -2,11 +2,10 @@
     "use strict";
 
     // Initiate the wowjs
-    new WOW().init();
-
- 
-
-  
+    new WOW({
+        mobile: true,
+        live: false
+    }).init();
 
     // Spinner
     var spinner = function () {
@@ -19,6 +18,9 @@
     spinner();
 
 
+    
+
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 180) {
@@ -27,7 +29,6 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-128px');
         }
     });
-    
     
     // Back to top button
     $(window).scroll(function () {
@@ -50,11 +51,12 @@
         items: 1,
         dots: true,
         loop: true,
-        nav: true,
-    autoplayTimeout: 4000,       // time between slides (2 sec)
-    autoplayHoverPause: false,    // pause on hover
-    // smartSpeed: 800,             // smooth transition speed
-        navText : [
+        nav: false,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        touchDrag: true,
+        pullDrag: true,
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
