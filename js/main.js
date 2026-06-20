@@ -26,7 +26,7 @@
         if ($(this).scrollTop() > 180) {
             $('.sticky-top').addClass('shadow-sm').css('top', '0px');
         } else {
-            $('.sticky-top').removeClass('shadow-sm').css('top', '-128px');
+            $('.sticky-top').removeClass('shadow-sm').css('top', '-var(--nav-height)');
         }
     });
     
