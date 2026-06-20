@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="Images/favicon_io/favicon-16x16.png" rel="icon">
+    <link href="images/favicon_io/favicon-16x16.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +21,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- <link href="lib/animate/animate.min.css" rel="stylesheet"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +44,7 @@
 window.addEventListener('scroll', () => {
 
     const sections = document.querySelectorAll(
-        '#home, #facilities, #about, #classes, #notice-events, #teachers, #admission'
+        '#home, #facilities, #about, #classes, #notice-events, #teachers, #admission, #contact'
     );
 
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .dropdown-item');
@@ -97,7 +99,7 @@ window.addEventListener('scroll', () => {
         <!-- Navbar Start -->
         <nav id="navbar" class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="#home" class="navbar-brand">
-                <img src="Images/logo.png" alt="Logo">
+                <img src="images/logo.png" alt="Logo">
                 <!-- <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Al-Hadi International Academy </h1> -->
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -138,7 +140,7 @@ window.addEventListener('scroll', () => {
         <div id="home" class="container-fluid p-0 mb-5 ">
             <div class="owl-carousel header-carousel position-relative">
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid owl-img" src="Images/slider/img1.jpg"  alt="">
+                    <img class="img-fluid owl-img" src="images/slider/img1.jpg"  alt="">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -153,7 +155,7 @@ window.addEventListener('scroll', () => {
                     </div>
                 </div>
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid owl-img" src="Images/slider/img4.jpg" alt="">
+                    <img class="img-fluid owl-img" src="images/slider/img4.jpg" alt="">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -169,7 +171,7 @@ window.addEventListener('scroll', () => {
                 </div>
 
                  <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid owl-img" src="Images/slider/img5.jpg" alt="">
+                    <img class="img-fluid owl-img" src="images/slider/img5.jpg" alt="">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -184,7 +186,7 @@ window.addEventListener('scroll', () => {
                     </div>
                 </div>
                  <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid owl-img" src="Images/slider/img6.jpg" alt="">
+                    <img class="img-fluid owl-img" src="images/slider/img6.jpg" alt="">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -218,7 +220,7 @@ window.addEventListener('scroll', () => {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="facility-card">
                     <div class="facility-image">
-                        <img src="Images/facilities/physical_campus2.jpg" alt="Physical Campus">
+                        <img src="images/facilities/physical_campus2.jpg" alt="Physical Campus">
                     </div>
                     <div class="facility-content border-primary">
                         <h4>Permanent Campus</h4>
@@ -231,7 +233,7 @@ window.addEventListener('scroll', () => {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="facility-card">
                     <div class="facility-image">
-                        <img src="Images/facilities/kids_zone.jpg" alt="Kids Zone">
+                        <img src="images/facilities/kids_zone.jpg" alt="Kids Zone">
                     </div>
                     <div class="facility-content border-success">
                         <h4>Kids Zone</h4>
@@ -244,7 +246,7 @@ window.addEventListener('scroll', () => {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="facility-card">
                     <div class="facility-image">
-                        <img src="Images/facilities/activity_based_learning.jpg" alt="Activity Based Learning">
+                        <img src="images/facilities/activity_based_learning.jpg" alt="Activity Based Learning">
                     </div>
                     <div class="facility-content border-warning">
                         <h4>Activity Based Learning</h4>
@@ -257,7 +259,7 @@ window.addEventListener('scroll', () => {
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="facility-card">
                     <div class="facility-image">
-                        <img src="Images/facilities/highly_qualified_teachers.jpg" alt="Highly Qualified Teachers">
+                        <img src="images/facilities/highly_qualified_teachers.jpg" alt="Highly Qualified Teachers">
                     </div>
                     <div class="facility-content border-info">
                         <h4>Highly Qualified Teachers</h4>
@@ -284,7 +286,7 @@ window.addEventListener('scroll', () => {
                             <div class="facility-icon bg-primary">
                                 <span class="bg-primary"></span>
                                 <i class="fa fa-bus-alt fa-3x text-primary"></i>
-                                 <img class="img-fluid" src="Images/facilities/physical_campus.jpg" alt="" style="width: 50px; height: 50px;">
+                                 <img class="img-fluid" src="images/facilities/physical_campus.jpg" alt="" style="width: 50px; height: 50px;">
                                 <span class="bg-primary"></span>
                             </div>
                             <div class="facility-text bg-primary">
@@ -370,58 +372,58 @@ window.addEventListener('scroll', () => {
     
         <div class="slider slider_circle_10">
             <div>
-                <img src="Images/cultural_activity/img1.jpg">
+                <img src="images/cultural_activity/img1.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img2.jpg">
+                <img src="images/cultural_activity/img2.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img3.jpg">
+                <img src="images/cultural_activity/img3.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img4.jpg">
+                <img src="images/cultural_activity/img4.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img5.jpg">
+                <img src="images/cultural_activity/img5.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img6.jpg">
+                <img src="images/cultural_activity/img6.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img7.jpg">
+                <img src="images/cultural_activity/img7.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img8.jpg">
+                <img src="images/cultural_activity/img8.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img9.jpg">
+                <img src="images/cultural_activity/img9.jpg">
             </div>
              <div>
-                <img src="Images/cultural_activity/img10.jpg">
+                <img src="images/cultural_activity/img10.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img11.jpg">
+                <img src="images/cultural_activity/img11.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img12.jpg">
+                <img src="images/cultural_activity/img12.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img13.jpg">
+                <img src="images/cultural_activity/img13.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img14.jpg">
+                <img src="images/cultural_activity/img14.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img15.jpg">
+                <img src="images/cultural_activity/img15.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img16.jpg">
+                <img src="images/cultural_activity/img16.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img17.jpg">
+                <img src="images/cultural_activity/img17.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img18.jpg">
+                <img src="images/cultural_activity/img18.jpg">
             </div>
             <div class="next_button"></div>
             <div class="prev_button"></div>
@@ -533,65 +535,65 @@ window.addEventListener('scroll', () => {
                     <!-- Your Existing EasySlides Here -->
 
                     
-                                     <section>
+      <section>
     
         <div class="slider slider_circle_10">
             <div>
-                <img src="Images/cultural_activity/img1.jpg">
+                <img src="images/cultural_activity/img1.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img2.jpg">
+                <img src="images/cultural_activity/img2.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img3.jpg">
+                <img src="images/cultural_activity/img3.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img4.jpg">
+                <img src="images/cultural_activity/img4.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img5.jpg">
+                <img src="images/cultural_activity/img5.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img6.jpg">
+                <img src="images/cultural_activity/img6.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img7.jpg">
+                <img src="images/cultural_activity/img7.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img8.jpg">
+                <img src="images/cultural_activity/img8.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img9.jpg">
+                <img src="images/cultural_activity/img9.jpg">
             </div>
              <div>
-                <img src="Images/cultural_activity/img10.jpg">
+                <img src="images/cultural_activity/img10.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img11.jpg">
+                <img src="images/cultural_activity/img11.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img12.jpg">
+                <img src="images/cultural_activity/img12.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img13.jpg">
+                <img src="images/cultural_activity/img13.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img14.jpg">
+                <img src="images/cultural_activity/img14.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img15.jpg">
+                <img src="images/cultural_activity/img15.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img16.jpg">
+                <img src="images/cultural_activity/img16.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img17.jpg">
+                <img src="images/cultural_activity/img17.jpg">
             </div>
             <div>
-                <img src="Images/cultural_activity/img18.jpg">
+                <img src="images/cultural_activity/img18.jpg">
             </div>
-            <div class="next_button"></div>
-            <div class="prev_button"></div>
+            <!-- <div class="next_button"></div>
+            <div class="prev_button"></div> -->
         </div>
         <script>
                 EasySlides('.slider_circle_10',{
@@ -650,31 +652,27 @@ window.addEventListener('scroll', () => {
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="classes-item">
                             <div class="rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-1.jpg" alt="">
+                                <img class="img-fluid rounded-circle" src="images/curriculam/img1.png" alt="">
                             </div>
-                            <div class="class-card rounded p-4 pt-5 mt-n5">
+                            <div class="class-card rounded p-4 pt-5 mt-n6">
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">National Curriculum (English Version) <br> Play - Standard Five</a>
                                 <ul class="space-y-2 text-sm">
-          <li>Communication & Language</li>
-          <li>Literacy</li>
-          <li>Understanding the World</li>
-          <li>Mathematics</li>
-          <li>Expressive Arts & Design</li>
-        </ul>
-                                <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            
+                                        <li>Communication & Language</li>
+                                        <li>Literacy</li>
+                                        <li>Understanding the World</li>
+                                        <li>Mathematics</li>
+                                        <li>Expressive Arts & Design</li>
+                                        </ul>
+                               <div class="class-bottom-border">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="color-bar bg-primary"></div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            
+                                        <div class="col-4">
+                                            <div class="color-bar bg-success"></div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                        
+                                        <div class="col-4">
+                                            <div class="color-bar bg-warning"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -684,31 +682,27 @@ window.addEventListener('scroll', () => {
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="classes-item">
                             <div class=" rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-2.jpg" alt="">
+                                <img class="img-fluid rounded-circle" src="images/curriculam/img2.png" alt="">
                             </div>
-                            <div class="class-card rounded p-4 pt-5 mt-n5">
+                            <div class="class-card rounded p-4 pt-5 mt-n6">
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">Hifz Program</a>
                                       <ul class="space-y-2 text-sm">
-          <li>Communication & Language</li>
-          <li>Literacy</li>
-          <li>Understanding the World</li>
-          <li>Mathematics</li>
-          <li>Expressive Arts & Design</li>
-        </ul>
-                              <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            
+                                            <li>Communication & Language</li>
+                                            <li>Literacy</li>
+                                            <li>Understanding the World</li>
+                                            <li>Mathematics</li>
+                                            <li>Expressive Arts & Design</li>
+                                            </ul>
+                             <div class="class-bottom-border">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="color-bar bg-primary"></div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            
+                                        <div class="col-4">
+                                            <div class="color-bar bg-success"></div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                        
+                                        <div class="col-4">
+                                            <div class="color-bar bg-warning"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -718,31 +712,27 @@ window.addEventListener('scroll', () => {
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="classes-item">
                             <div class=" rounded-circle w-75 mx-auto p-3">
-                                <img class="img-fluid rounded-circle" src="img/classes-3.jpg" alt="">
+                                <img class="img-fluid rounded-circle" src="images/curriculam/img3.png" alt="">
                             </div>
-                            <div class="class-card rounded p-4 pt-5 mt-n5">
+                            <div class="class-card rounded p-4 pt-5 mt-n6">
                                 <a class="d-block text-center h3 mt-3 mb-4" href="">Character Development Curriculum</a>
                                       <ul class="space-y-2 text-sm">
-          <li>Communication & Language</li>
-          <li>Literacy</li>
-          <li>Understanding the World</li>
-          <li>Mathematics</li>
-          <li>Expressive Arts & Design</li>
-        </ul>
-                               <div class="row g-1">
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-primary pt-2">
-                                            
+                                            <li>Communication & Language</li>
+                                            <li>Literacy</li>
+                                            <li>Understanding the World</li>
+                                            <li>Mathematics</li>
+                                            <li>Expressive Arts & Design</li>
+                                            </ul>
+                               <div class="class-bottom-border">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="color-bar bg-primary"></div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-success pt-2">
-                                            
+                                        <div class="col-4">
+                                            <div class="color-bar bg-success"></div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="border-top border-3 border-warning pt-2">
-                                        
+                                        <div class="col-4">
+                                            <div class="color-bar bg-warning"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -773,7 +763,7 @@ window.addEventListener('scroll', () => {
             <div class="col-lg-7">
                 <div class="modern-card h-100">
                     <div class="section-header">
-                        <i class="fas fa-bullhorn text-primary"></i>
+                        <i class="fas fa-bullhorn"></i>
                         <h4>Notice Board</h4>
                     </div>
 
@@ -814,7 +804,7 @@ window.addEventListener('scroll', () => {
             <div class="col-lg-5">
                 <div class="modern-card h-100">
                     <div class="section-header">
-                        <i class="fas fa-calendar-alt text-success"></i>
+                        <i class="fas fa-calendar-alt "></i>
                         <h4>Upcoming Events</h4>
                     </div>
 
@@ -942,7 +932,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Aklima khanam</h4>
@@ -956,7 +946,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Hurain jannat Ibtesam</h4>
@@ -970,7 +960,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Afia Khanam Beli</h4>
@@ -984,7 +974,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Umme Habiba</h4>
@@ -998,7 +988,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Afroza Sultana</h4>
@@ -1012,7 +1002,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Humaira Afroz Jami</h4>
@@ -1026,7 +1016,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Nishat Akter</h4>
@@ -1040,7 +1030,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Mahsura Al Marzan</h4>
@@ -1054,7 +1044,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Shayela Sharmin</h4>
@@ -1068,7 +1058,7 @@ window.addEventListener('scroll', () => {
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/default.jpg" alt="">
             </div>
             <div class="teacher-content">
                 <h4>Rifat Sultana Jessy</h4>
@@ -1078,22 +1068,24 @@ window.addEventListener('scroll', () => {
         </div>
     </div>
 
+
+
      <!-- Teacher 11 -->
     <div>
         <div class="teacher-card">
             <div class="teacher-image">
-                <img src="Images//teachers/default.jpg" alt="">
+                <img src="images//teachers/hifz.jpg" alt="">
             </div>
             <div class="teacher-content">
-                <h4>Afroza Sultana</h4>
-                <span class="teacher-role"></span>
+                <h4>Hafez Abdullah Al Noman</h4>
+                <span class="teacher-role">Hifz Teacher</span>
                 <div class="qualification">B.S.S , M.S.S (Economics)<br> University Of Chittagong</div>
             </div>
         </div>
     </div>
 
-    <div class="next_button"></div>
-    <div class="prev_button"></div>
+    <!-- <div class="next_button"></div>
+    <div class="prev_button"></div> -->
 
 </div>
     </div></div>
@@ -1104,8 +1096,8 @@ EasySlides('.slider_four_in_line',{
 });
 </script>
     
-
 <!-- Teachers Section End -->
+
 
 
 <!-- Admission Section Start -->
@@ -1185,12 +1177,16 @@ EasySlides('.slider_four_in_line',{
 
                         <div class="info-row">
                             <span>Office Hours</span>
-                            <strong>9:00 AM - 4:00 PM</strong>
+                            <strong>9:00 AM - 4:00 PM </strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Office Days</span>
+                            <strong>SAT - THU </strong>
                         </div>
 
                         <div class="info-row">
                             <span>Contact</span>
-                            <strong>+880 1XXXXXXXXX</strong>
+                            <strong>+880 1896-322722</strong>
                         </div>
 
                     </div>
@@ -1206,7 +1202,10 @@ EasySlides('.slider_four_in_line',{
                             Download Admission Form
                         </a>
 
-                      
+                       <a href="online-admission.html"
+                           class="btn btn-outline-primary apply rounded-pill px-4 py-3">
+                            Apply Online
+                        </a>
 
                     </div>
 
@@ -1223,7 +1222,7 @@ EasySlides('.slider_four_in_line',{
 
 
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5">
+        <!-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Our Clients Say!</h1>
@@ -1265,7 +1264,7 @@ EasySlides('.slider_four_in_line',{
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Testimonial End -->
 
         <!-- Contact Start -->
@@ -1290,8 +1289,7 @@ EasySlides('.slider_four_in_line',{
                     </div>
                     <h5>School Address</h5>
                     <p>
-                        Al-Hadi International Academy<br>
-                        Chattogram, Bangladesh
+                        Road No:02, Beside C Block Steel Bridge, North of Tower, Kolpolok Residential Area, Bakolia,, Chittagong, Bangladesh, 4203
                     </p>
                 </div>
             </div>
@@ -1303,8 +1301,8 @@ EasySlides('.slider_four_in_line',{
                     </div>
                     <h5>Call Us</h5>
                     <p>
-                        +880 1XXXXXXXXX<br>
-                        +880 1XXXXXXXXX
+                        +880 1896-322722<br>
+                        
                     </p>
                 </div>
             </div>
@@ -1316,8 +1314,8 @@ EasySlides('.slider_four_in_line',{
                     </div>
                     <h5>Email Address</h5>
                     <p>
-                        info@alhadiacademy.com<br>
-                        admission@alhadiacademy.com
+                        alhadiinternationalacademy@gmail.com<br>
+    
                     </p>
                 </div>
             </div>
@@ -1326,67 +1324,75 @@ EasySlides('.slider_four_in_line',{
 
         <div class="contact-wrapper">
 
-            <div class="row g-0">
+            <div class="row g-4">
 
-                <!-- Contact Form -->
-                <div class="col-lg-7">
-                    <div class="contact-form-box">
+    <!-- Contact Form -->
+    <div class="col-lg-6">
+        <div class="contact-card">
 
-                        <h3 class="mb-4">Send Us A Message</h3>
-
-                        <form>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control modern-input" placeholder="Your Name">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control modern-input" placeholder="Email Address">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control modern-input" placeholder="Phone Number">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control modern-input" placeholder="Subject">
-                                </div>
-
-                                <div class="col-12">
-                                    <textarea class="form-control modern-input"
-                                        rows="6"
-                                        placeholder="Write your message..."></textarea>
-                                </div>
-
-                                <div class="col-12">
-                                    <button class="btn btn-success contact-btn">
-                                        Send Message
-                                    </button>
-                                </div>
-
-                            </div>
-
-                        </form>
-
-                    </div>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="col-lg-5">
-                   
-
-                      
-                            <div class="position-relative h-100">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1845.1252617649293!2d91.85527527366038!3d22.344167489664457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad27004a17a5bd%3A0x237780317c7249fc!2sAl-Hadi%20International%20Academy!5e0!3m2!1sen!2sbd!4v1780768767923!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                       
-
-                   
-                </div>
-
+            <div class="contact-card-header">
+                <span>Contact Us</span>
+                <h3>Send Us A Message</h3>
             </div>
+
+            <form>
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control modern-input" placeholder="Your Name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="email" class="form-control modern-input" placeholder="Email Address">
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control modern-input" placeholder="Phone Number">
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control modern-input" placeholder="Subject">
+                    </div>
+
+                    <div class="col-12">
+                        <textarea class="form-control modern-input"
+                            rows="6"
+                            placeholder="Write your message..."></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-success contact-btn">
+                            Send Message
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="col-lg-6">
+        <div class="contact-card map-card">
+
+            <div class="contact-card-header">
+                <span>Our Location</span>
+                <h3>Visit Our Campus</h3>
+            </div>
+
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1845.1252617649293!2d91.85527527366038!3d22.344167489664457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad27004a17a5bd%3A0x237780317c7249fc!2sAl-Hadi%20International%20Academy!5e0!3m2!1sen!2sbd!4v1780768767923!5m2!1sen!2sbd"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 
         </div>
 
@@ -1401,6 +1407,7 @@ EasySlides('.slider_four_in_line',{
                 <div class="row g-5">
                     <div class="col-lg-5 col-md-6">
                         <h3 class="text-white mb-4">Get In Touch</h3>
+                    
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Road No:02, Beside C Block Steel Bridge, North of Tower, Kolpolok Residential Area, Bakolia,, Chittagong, Bangladesh, 4203</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>01896-322722</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>alhadiinternationalacademy@gmail.com</p>
@@ -1413,8 +1420,9 @@ EasySlides('.slider_four_in_line',{
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Quick Links</h3>
+                        <a class="btn btn-link text-white-50" href="#admission">Admission</a>
                         <a class="btn btn-link text-white-50" href="#about">About Us</a>
-                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="#contact">Contact Us</a>
                         <a class="btn btn-link text-white-50" href="">Our Services</a>
                         <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
                         <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
@@ -1436,10 +1444,9 @@ EasySlides('.slider_four_in_line',{
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; 2026 Al-Hadi International Academy, All Right Reserved. 
 							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By Rifat Softwares
+				
+							Designed By Rifat
                             <br>
-                            <!-- Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

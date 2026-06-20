@@ -9,6 +9,21 @@ html {
     scroll-behavior: smooth;
     
 }
+body{
+    background-color: #ffffff !important;
+}
+
+#facilities h1,#about h1,#classes h1,#notice-events h1, #admission h1,#teachers h1,#contact h1{
+color: #2E7D32;
+}
+
+.mt-n6 {
+    margin-top: -4rem !important;
+}
+
+.breadcrumb-item a{
+    color: #00f583 !important;
+}
 
 
 .bg-light {
@@ -53,6 +68,18 @@ html {
 }
 
 .btn.btn-primary {
+    color: #FFFFFF;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn.btn-outline-primary {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primary);
+}
+
+.btn.btn-outline-primary:hover {
     color: #FFFFFF;
     background-color: var(--primary);
     border-color: var(--primary);
@@ -135,10 +162,10 @@ h6,
 }
 
 /* Hover */
-/* .navbar .dropdown-menu .dropdown-item:hover {
-    background: var(--primary);
-    color: #fff;
-} */
+.navbar .dropdown-menu .dropdown-item:hover {
+    /* background: lightgray !important; */
+    color: #000000;
+}
 
 /* Focus (this is usually the orange culprit) */
 .navbar .dropdown-menu .dropdown-item:focus,
@@ -151,12 +178,12 @@ h6,
 
 /* Active (click state) */
 .navbar .dropdown-menu .dropdown-item:active {
-    background: var(--primary) !important;
+    background: #8BC34A !important;
     color: #fff !important;
 }
 
 .dropdown-item.active {
-    background: var(--primary) !important;
+    background: #8BC34A !important;
     color: #fff !important;
 }
 
@@ -277,6 +304,7 @@ h6,
 }
 
 .header-carousel .owl-nav {
+    display: none !important;
     position: absolute;
     top: 50%;
     right: 8%;
@@ -369,7 +397,7 @@ scroll-margin-top: 174px !important;
 .facility-content h4 {
     font-weight: 700;
     margin-bottom: 12px;
-    color: #103741;
+    color: #2e7d32;
 }
 
 .facility-content p {
@@ -503,7 +531,7 @@ scroll-margin-top: 174px !important;
 }
 
 .about-card h3{
-    color:#162b1a;
+    color:#2e7d32;
     font-weight:700;
 }
 
@@ -540,22 +568,59 @@ scroll-margin-top: 174px !important;
 
 
 /*** Classes ***/
-.classes-item {
-    transition: .5s;
-    
+.classes-item{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    transition:.4s;
 }
 
-.classes-item:hover {
-    margin-top: -10px;
+.classes-item:hover{
+    transform:translateY(-10px);
 }
 
 .class-card{
-        background: #fff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
-    transition: all .4s ease;
-    height: 100%;
+    
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.4s;
+    flex:1;                     /* Makes all cards equal height */
+    display:flex;
+    flex-direction:column;
+    padding:30px;
+}
+
+.class-card a{
+    min-height:80px;            /* Keeps titles aligned */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    /* font-size:1.5rem;
+    font-weight:700; */
+    text-decoration:none;
+    color:#2e7d32;
+}
+
+.class-card ul{
+    flex:1;                     /* Pushes border section to bottom */
+    margin-bottom:25px;
+    padding-left:20px;
+}
+
+.class-card ul li{
+    margin-bottom:10px;
+    color:#555;
+}
+
+.class-bottom-border{
+    margin-top:auto;
+}
+
+.class-bottom-border .color-bar{
+    height:3px;
+    border-radius:10px;
 }
 
 
@@ -568,9 +633,9 @@ scroll-margin-top: 174px !important;
     transition:.3s;
 }
 
-.modern-card:hover{
+/* .modern-card:hover{
     transform:translateY(-5px);
-}
+} */
 
 .section-header{
     display:flex;
@@ -579,10 +644,16 @@ scroll-margin-top: 174px !important;
     margin-bottom:25px;
     border-bottom:1px solid #eee;
     padding-bottom:15px;
+    /* color:#2e7d32; */
+}
+.section-header h4{
+   color:#2e7d32;
 }
 
 .section-header i{
     font-size:24px;
+    color:#ffc107;
+    
 }
 
 .notice-list{
@@ -664,10 +735,13 @@ scroll-margin-top: 174px !important;
 
 /*** Teacher ***/
 .teacher-card{
+    height:97%;
+    display:flex;
+    flex-direction:column;
     background:#fff;
     border-radius:20px;
     overflow:hidden;
-    margin:15px;
+    /* margin:15px; */
     transition:.3s;
     border:1px solid #f0f0f0;
     box-shadow:0 10px 10px rgba(0,0,0,.05);
@@ -695,32 +769,54 @@ scroll-margin-top: 174px !important;
 }
 
 .teacher-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     padding:25px;
     text-align:center;
+   
+   
+   
+    height:236px; /* adjust as needed */
+     /* min-height:236px; */
 }
 
 .teacher-content h4{
     font-weight:700;
-    margin-bottom:5px;
+    margin-bottom:8px;
+    min-height:56px; /* same space for all names */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#2e7d32;
 }
 
 .teacher-role{
     color:#16a34a;
     font-weight:600;
     display:block;
+    min-height:24px;
     margin-bottom:12px;
+
 }
 
 .qualification {
-    display: inline-block;
-    background: #eafaf1;   /* light green background */
-    color: #16a34a;        /* modern green text */
-    padding: 8px 15px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    border: 1px solid #bbf7d0; /* soft green border */
+     display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:#eafaf1;
+    color:#16a34a;
+    border:1px solid #bbf7d0;
+    border-radius:10px;
+
+    padding:12px 15px;
+    width:100%;
+    height:inherit;
+    min-height:80px; /* same height for all qualifications */
+    margin-top:auto; /* pushes qualification to bottom */
 }
 
 .teacher-content p{
@@ -731,7 +827,10 @@ scroll-margin-top: 174px !important;
 .slider_four_in_line img {
     position: inherit !important;
 }
-
+.slider_four_in_line > div{
+    height:100%;
+    padding:10px;
+}
 
 
 /*** Admission ***/
@@ -796,6 +895,16 @@ scroll-margin-top: 174px !important;
 .text-success{
     color:#2E7D32 !important;
 }
+/* .apply{
+    color: #2E7D32 !important;
+    border-color: #2E7D32 !important;
+}
+.apply:hover{
+    color: #ffffff !important;
+    border-color: #2E7D32 !important;
+    background-color: #2E7D32 !important;
+} */
+
 
 @media(max-width:768px){
     .admission-section{
@@ -884,10 +993,10 @@ scroll-margin-top: 174px !important;
     box-shadow:0 8px 25px rgba(0,0,0,.04);
 }
 
-.contact-card:hover{
+/* .contact-card:hover{
     transform:translateY(-8px);
     box-shadow:0 15px 35px rgba(25,135,84,.12);
-}
+} */
 
 .contact-icon{
     width:70px;
@@ -903,11 +1012,27 @@ scroll-margin-top: 174px !important;
     font-size:26px;
 }
 
-.contact-wrapper{
+/* .contact-wrapper{
     background:#fff;
     border-radius:30px;
     overflow:hidden;
     box-shadow:0 10px 40px rgba(0,0,0,.06);
+} */
+
+.contact-card-header span{
+    display:inline-block;
+    background:#eafaf1;
+    color:#16a34a;
+    padding:6px 15px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.contact-card-header h3{
+    font-weight:700;
+    margin-bottom:25px;
 }
 
 .contact-form-box{
@@ -931,12 +1056,14 @@ scroll-margin-top: 174px !important;
 
 .modern-input:focus{
     background:#eef8f2;
+     box-shadow:none;
 }
 
 .contact-btn{
     padding:14px 35px;
-    border-radius:50px;
+    border-radius:10px;
     font-weight:600;
+    width:100%;
 }
 
 .contact-info-item{
@@ -951,6 +1078,18 @@ scroll-margin-top: 174px !important;
     margin-top:4px;
 }
 
+.map-wrapper{
+    border-radius:18px;
+    overflow:hidden;
+    height:420px;
+}
+
+.map-wrapper iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
 @media(max-width:768px){
 
     .contact-form-box,
@@ -958,7 +1097,23 @@ scroll-margin-top: 174px !important;
         padding:30px;
     }
 
+    .contact-card{
+        padding:25px;
+    }
+
+    .map-wrapper{
+        height:320px;
+    }
+
 }
+
+
+/**Online Admission Form**/
+.online-admission-form h3{
+    color: #2E7D32;
+}
+
+
 
 
 /*** Footer ***/
