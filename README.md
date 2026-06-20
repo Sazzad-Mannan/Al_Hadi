@@ -85,6 +85,11 @@ The website includes information about:
 * Testimonials
 * Contact
 
+## 🌐 Live Website
+
+🔗 [Visit Website](https://Sazzad-Mannan.github.io/Al_Hadi/)
+
+
 ## 🚀 Installation
 
 1. Clone the repository:
@@ -115,6 +120,7 @@ The website is optimized for:
 * Easy navigation
 * Fast loading experience
 * Child-friendly visual appearance
+
 
 ## 👨‍💻 Developer
 
