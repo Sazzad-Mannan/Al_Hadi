@@ -1320,6 +1320,11 @@ h6,
   .owl-img {
     height: auto !important;
   }
+
+  .slider_circle_10 {
+    width: 70vw !important;
+    height: 55.2vw !important;
+  }
 }
 
 @media (max-width: 592px) {
@@ -1408,5 +1413,13 @@ h6,
   }
   .footer .social {
     justify-content: center !important;
+  }
+
+  .slider_circle_10 .active {
+    top: 0% !important;
+    left: 0% !important;
+    margin-left: 0% !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
