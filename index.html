@@ -110,6 +110,121 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  (function() {
+    const wrapper = document.querySelector('.teacher-slider-wrapper');
+    if (!wrapper) return;
+
+    const slider = wrapper.querySelector('.teacher-slider');
+    const slides = Array.from(wrapper.querySelectorAll('.teacher-slide'));
+    const prevBtn = wrapper.querySelector('.teacher-slider-prev');
+    const nextBtn = wrapper.querySelector('.teacher-slider-next');
+    const dotsContainer = wrapper.querySelector('.teacher-slider-dots');
+
+    let currentIndex = 0;
+    let perPage = getPerPage();
+
+    function getPerPage() {
+      const width = window.innerWidth;
+      return width <= 568 ? 1 : width <= 990 ? 3 : 4;
+    }
+
+    function build() {
+      perPage = getPerPage();
+  const slideWidth = 100 / perPage;
+
+  slides.forEach(slide => {
+    slide.style.setProperty('--teacher-slide-width', `${slideWidth}%`);
+  });
+
+      const maxIndex = Math.max(0, slides.length - perPage);
+      if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+      }
+
+      renderDots(maxIndex + 1);
+      update();
+    }
+
+    function renderDots(count) {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < count; i++) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'teacher-slider-dot';
+        dot.setAttribute('aria-label', `Jump to slide ${i + 1}`);
+        dot.addEventListener('click', () => {
+          currentIndex = i;
+          update();
+          resetAutoSlide();
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function update() {
+      const slideWidth = 100 / perPage;
+      const offset = currentIndex * slideWidth;
+      slider.style.transform = `translateX(-${offset}%)`;
+      dotsContainer.querySelectorAll('.teacher-slider-dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function nextPage() {
+      const maxIndex = Math.max(0, slides.length - perPage);
+      currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+      update();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      const maxIndex = Math.max(0, slides.length - perPage);
+      currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+      update();
+      resetAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      nextPage();
+      resetAutoSlide();
+    });
+
+    wrapper.addEventListener('mouseenter', stopAutoSlide);
+    wrapper.addEventListener('mouseleave', startAutoSlide);
+
+    let autoSlideTimer = null;
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideTimer = setInterval(nextPage, 4000);
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideTimer) {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = null;
+      }
+    }
+
+    function resetAutoSlide() {
+      stopAutoSlide();
+      startAutoSlide();
+    }
+
+    window.addEventListener('resize', debounce(build, 120));
+    build();
+    startAutoSlide();
+
+    function debounce(fn, delay) {
+      let timer;
+      return function() {
+        clearTimeout(timer);
+        timer = setTimeout(fn, delay);
+      };
+    }
+  })();
+});
     </script>
 </head>
 
@@ -1119,119 +1234,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 <!-- Teachers Section End -->
 
-<script>
-(function() {
-  const wrapper = document.querySelector('.teacher-slider-wrapper');
-  if (!wrapper) return;
 
-  const slider = wrapper.querySelector('.teacher-slider');
-  const slides = Array.from(wrapper.querySelectorAll('.teacher-slide'));
-  const prevBtn = wrapper.querySelector('.teacher-slider-prev');
-  const nextBtn = wrapper.querySelector('.teacher-slider-next');
-  const dotsContainer = wrapper.querySelector('.teacher-slider-dots');
-
-  let currentIndex = 0;
-  let perPage = getPerPage();
-
-  function getPerPage() {
-    const width = window.innerWidth;
-    return width <= 568 ? 1 : width <= 990 ? 3 : 4;
-  }
-
-  function build() {
-    perPage = getPerPage();
-const slideWidth = 100 / perPage;
-
-slides.forEach(slide => {
-  slide.style.setProperty('--teacher-slide-width', `${slideWidth}%`);
-});
-
-    const maxIndex = Math.max(0, slides.length - perPage);
-    if (currentIndex > maxIndex) {
-      currentIndex = maxIndex;
-    }
-
-    renderDots(maxIndex + 1);
-    update();
-  }
-
-  function renderDots(count) {
-    dotsContainer.innerHTML = '';
-    for (let i = 0; i < count; i++) {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'teacher-slider-dot';
-      dot.setAttribute('aria-label', `Jump to slide ${i + 1}`);
-      dot.addEventListener('click', () => {
-        currentIndex = i;
-        update();
-        resetAutoSlide();
-      });
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  function update() {
-    const slideWidth = 100 / perPage;
-    const offset = currentIndex * slideWidth;
-    slider.style.transform = `translateX(-${offset}%)`;
-    dotsContainer.querySelectorAll('.teacher-slider-dot').forEach((dot, index) => {
-      dot.classList.toggle('active', index === currentIndex);
-    });
-  }
-
-  function nextPage() {
-    const maxIndex = Math.max(0, slides.length - perPage);
-    currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
-    update();
-  }
-
-  prevBtn.addEventListener('click', () => {
-    const maxIndex = Math.max(0, slides.length - perPage);
-    currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
-    update();
-    resetAutoSlide();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    nextPage();
-    resetAutoSlide();
-  });
-
-  wrapper.addEventListener('mouseenter', stopAutoSlide);
-  wrapper.addEventListener('mouseleave', startAutoSlide);
-
-  let autoSlideTimer = null;
-  function startAutoSlide() {
-    stopAutoSlide();
-    autoSlideTimer = setInterval(nextPage, 4000);
-  }
-
-  function stopAutoSlide() {
-    if (autoSlideTimer) {
-      clearInterval(autoSlideTimer);
-      autoSlideTimer = null;
-    }
-  }
-
-  function resetAutoSlide() {
-    stopAutoSlide();
-    startAutoSlide();
-  }
-
-  window.addEventListener('resize', debounce(build, 120));
-  build();
-  startAutoSlide();
-
-  function debounce(fn, delay) {
-    let timer;
-    return function() {
-      clearTimeout(timer);
-      timer = setTimeout(fn, delay);
-    };
-  }
-})();
-</script>
 
 
 
