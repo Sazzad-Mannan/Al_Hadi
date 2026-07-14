@@ -586,6 +586,51 @@ h6,
   color: #666;
 }
 
+@media (max-width: 767.98px) {
+  .about-section {
+    overflow: hidden;
+  }
+
+  .about-section .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .about-section .row {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+  }
+
+  .about-section .row > [class*="col-"] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .about-section .gallery-card,
+  .about-section .about-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about-section .gallery-card section,
+  .about-section .gallery-card {
+    overflow: hidden;
+  }
+
+  .about-section .gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .slider_circle_10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
 /*** Classes ***/
 .classes-item {
   height: 100%;
@@ -790,7 +835,7 @@ h6,
   padding: 25px;
   text-align: center;
 
-  height: 236px; /* adjust as needed */
+  height: 170px; /* adjust as needed */
   /* min-height:236px; */
 }
 
@@ -828,7 +873,7 @@ h6,
   height: inherit;
   min-height: 80px; /* same height for all qualifications */
   margin-top: auto; /* pushes qualification to bottom */
-  font-size: 1.2vw;
+  /* font-size: 1.2vw; */
 }
 
 .teacher-content p {
@@ -836,12 +881,105 @@ h6,
   color: #666;
   line-height: 1.7;
 }
-.slider_four_in_line img {
-  position: inherit !important;
+
+.teacher-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
 }
-.slider_four_in_line > div {
-  height: 100%;
-  padding: 10px;
+
+.teacher-slider {
+  display: flex;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.teacher-slide {
+  flex: 0 0 var(--teacher-slide-width, 25%);
+  width: var(--teacher-slide-width, 25%);
+  max-width: var(--teacher-slide-width, 25%);
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.teacher-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.teacher-slider-prev {
+  left: 10px;
+}
+
+.teacher-slider-next {
+  right: 10px;
+}
+
+.teacher-slider-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.teacher-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.teacher-slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #d1e7d2;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.teacher-slider-dot.active {
+  background: #2e7d32;
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .teacher-slider-wrapper {
+    margin-top: 16px;
+  }
+
+  .teacher-slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .teacher-slider-wrapper {
+    margin-top: 12px;
+  }
+
+  .teacher-slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
 }
 
 /*** Admission ***/
@@ -923,7 +1061,11 @@ h6,
 
 @media (max-width: 768px) {
   .admission-section {
-    padding: 30px 20px;
+    padding: 30px 15px;
+  }
+  .admission-section h1,
+  h3 {
+    text-align: center;
   }
 
   .info-row {
@@ -1060,7 +1202,7 @@ h6,
   }
 
   .contact-card {
-    padding: 25px;
+    padding: 10px;
   }
 
   .map-wrapper {
@@ -1254,6 +1396,9 @@ h6,
   }
   .contact-card {
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.04) !important;
+  }
+  .contact-card p {
+    font-size: 13px !important;
   }
   .footer {
     text-align: center !important;

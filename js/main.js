@@ -53,7 +53,7 @@
         loop: true,
         nav: false,
         autoplayTimeout: 4000,
-        autoplayHoverPause: true,
+        autoplayHoverPause: false,
         touchDrag: true,
         pullDrag: true,
         navText: [
