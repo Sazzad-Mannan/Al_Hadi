@@ -357,7 +357,7 @@ h6,
 .page-header {
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../img/carousel-1.jpg) center center no-repeat;
+    url(../images/cultural_activity/img10.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -939,6 +939,7 @@ h6,
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+  padding: 5px 0px;
 }
 
 .teacher-slider-dot {
@@ -1352,6 +1353,7 @@ h6,
 
   .facility-card {
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.08) !important;
+    padding: 20px !important;
   }
   .facility-card:hover {
     transform: none !important;
@@ -1377,6 +1379,9 @@ h6,
     align-items: center !important;
     text-align: center !important;
   }
+  .section-header {
+    flex-direction: column !important;
+  }
 
   .modern-card {
     padding: 15px;
@@ -1390,6 +1395,11 @@ h6,
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0px 10px rgba(22, 43, 26, 0.08);
+  }
+  .admission-section .btn {
+    padding: 10px 20px !important;
+    display: grid !important;
+    border-radius: 10px !important;
   }
 
   .info-row {
