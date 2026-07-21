@@ -1401,6 +1401,9 @@ h6,
     display: grid !important;
     border-radius: 10px !important;
   }
+  .adform {
+    padding: 10px !important;
+  }
 
   .info-row {
     align-items: center !important;
